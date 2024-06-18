@@ -47,15 +47,25 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WeatherLatestViewModelTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DDD.Domain\DDD.Domain.csproj">
+      <Project>{cbc60e55-c664-4a1c-b939-4e6cd562c0f2}</Project>
+      <Name>DDD.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DDD.Infrastructure\DDD.Infrastructure.csproj">
+      <Project>{4e6190ff-c454-4919-a46a-33c231f7cf86}</Project>
+      <Name>DDD.Infrastructure</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WindowsFormsApp1\DDD.WinForm.csproj">
       <Project>{648b7240-fbf9-4e97-baca-3270b59f639f}</Project>
       <Name>DDD.WinForm</Name>

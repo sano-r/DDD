@@ -31,7 +31,8 @@ namespace WindowsFormsApp1
 
                 // ★下記BAD例: 温度を表示するのに「Common」「Const」を使うことをクライアントコードが知っている必要がある。
                 // 複数人開発時に知識の共有が難しくなる恐れがあるので、クライアントコードは使うだけにする実装にする。
-                TemperatureLabel.Text = CommonFunc.RoundString(Convert.ToSingle(dt.Rows[0]["Temperature"])
+                TemperatureLabel.Text = CommonFunc.RoundString(
+                    Convert.ToSingle(dt.Rows[0]["Temperature"])
                     , CommonConst.TemperatureDecimalPoint)
                     + CommonConst.TemperatureUnit;
             }

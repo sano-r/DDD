@@ -69,15 +69,16 @@
     <Compile Include="Common\CommonConst.cs" />
     <Compile Include="Common\CommonFunc.cs" />
     <Compile Include="Data\WeatherSQLite.cs" />
-    <Compile Include="WeatherLatestView.cs">
+    <Compile Include="ViewModels\WeatherLatestViewModel.cs" />
+    <Compile Include="Views\WeatherLatestView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WeatherLatestView.Designer.cs">
+    <Compile Include="Views\WeatherLatestView.Designer.cs">
       <DependentUpon>WeatherLatestView.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="WeatherLatestView.resx">
+    <EmbeddedResource Include="Views\WeatherLatestView.resx">
       <DependentUpon>WeatherLatestView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -102,6 +103,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DDD.Domain\DDD.Domain.csproj">
+      <Project>{cbc60e55-c664-4a1c-b939-4e6cd562c0f2}</Project>
+      <Name>DDD.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DDD.Infrastructure\DDD.Infrastructure.csproj">
+      <Project>{4e6190ff-c454-4919-a46a-33c231f7cf86}</Project>
+      <Name>DDD.Infrastructure</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
